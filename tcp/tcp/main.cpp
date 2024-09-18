@@ -7,7 +7,7 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 
-typedef int socklen_t;
+
 
 #define SERVER_ADDRESS "127.0.0.1"
 #define PORT 8081
@@ -15,12 +15,6 @@ typedef int socklen_t;
 
 int main()
 {
-    // 初始化 Winsock 库
-    WSADATA wsa_data;
-    if (WSAStartup(MAKEWORD(2, 2), &wsa_data) != 0) {
-        fprintf(stderr, "Failed to initialize Winsock\n");
-        return EXIT_FAILURE;
-    }
 
     char buffer[MAX_BUFFER_SIZE];
     SOCKET server_socket, client_socket = 0;
