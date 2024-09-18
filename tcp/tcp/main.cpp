@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+#include <winsock.h> 
 #include <errno.h>
 #include <arpa/inet.h>
 #include <sys/socket.h>
@@ -26,7 +26,7 @@ int main()
     server_addr.sin_addr.s_addr = INADDR_ANY;
     server_addr.sin_port = htons(PORT);
     int a;
-    scanf_s("%d", &a);
+    scanf("%d", &a);
 
     printf("start bind\n");
     bind(server_socket, (struct sockaddr*)&server_addr, sizeof(server_addr));
@@ -49,7 +49,7 @@ int main()
     }
     
 
-    scanf_s("%d", &a);
+    scanf("%d", &a);
     closesocket(client_socket);  //关闭连接
     closesocket(server_socket);  //关闭listen
 
