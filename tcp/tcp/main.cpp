@@ -43,7 +43,7 @@ int main()
     while (1) {
         while ((num_bytes_received = recv(client_socket, buffer, sizeof(buffer), 0)) > 0) {//接受信息
             buffer[num_bytes_received] = '\0';  // Null-terminate the received data
-            prinft("%s\n", buffer);
+            printf("%s\n", buffer);
         }
     }
     
