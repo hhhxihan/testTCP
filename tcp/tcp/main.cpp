@@ -7,7 +7,7 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 
-
+typedef int SOCKET;
 
 #define SERVER_ADDRESS "127.0.0.1"
 #define PORT 8081
