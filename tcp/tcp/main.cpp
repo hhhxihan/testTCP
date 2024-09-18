@@ -50,8 +50,8 @@ int main()
     
 
     scanf("%d", &a);
-    closesocket(client_socket);  //关闭连接
-    closesocket(server_socket);  //关闭listen
+    //closesocket(client_socket);  //关闭连接
+    //closesocket(server_socket);  //关闭listen
 
     return 0;
 }
