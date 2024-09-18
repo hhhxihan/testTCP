@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <unistd.h>
+
 #include <errno.h>
-#include <winsock2.h>
-#pragma comment(lib, "Ws2_32.lib")
+#include <arpa/inet.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+
 typedef int socklen_t;
 
 #define SERVER_ADDRESS "127.0.0.1"
