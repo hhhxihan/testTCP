@@ -9,7 +9,7 @@
 
 typedef int SOCKET;
 
-#define SERVER_ADDRESS "127.0.0.1"
+#define SERVER_ADDRESS "101.42.41.47"
 #define PORT 8081
 #define MAX_BUFFER_SIZE 1024
 
@@ -43,13 +43,12 @@ int main()
     while (1) {
         while ((num_bytes_received = recv(client_socket, buffer, sizeof(buffer), 0)) > 0) {//接受信息
             buffer[num_bytes_received] = '\0';  // Null-terminate the received data
-            // Send the same message back to the client
-            //send(client_socket, buffer, num_bytes_received, 0); //发送信息
+            prinft("%s\n", buffer);
         }
     }
     
 
-    scanf("%d", &a);
+    printf("over");
     //closesocket(client_socket);  //关闭连接
     //closesocket(server_socket);  //关闭listen
 
